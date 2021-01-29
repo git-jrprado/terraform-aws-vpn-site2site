@@ -25,3 +25,8 @@ variable "rtable_id" {
 variable "transit_nacl" {
     description = "Transit' NACL"
 }
+
+variable "serial" {
+  default     = 0
+  description = "Number of this peering, distinct from others, to avoid conflict with NACL rule number"
+}
