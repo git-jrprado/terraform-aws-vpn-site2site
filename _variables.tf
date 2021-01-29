@@ -21,9 +21,3 @@ variable "onpremise_cidr" {
 variable "rtable_id" {
     description = "ID of router table propagation"
 }
-
-variable "requester_cidrs" {
-  default     = []
-  type        = list(string)
-  description = "List of CIDRs to add to openvpn-access SG so clients can connect to resources"
-}
