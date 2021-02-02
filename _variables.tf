@@ -10,10 +10,6 @@ variable "external_ip" {
   description = "IP Address for GW"
 }
 
-variable "vpn_type" {
-  description = "Type of vpn tunnel"
-}
-
 variable "onpremise_cidr" {
     description = "CIDR of internal client network"
 }

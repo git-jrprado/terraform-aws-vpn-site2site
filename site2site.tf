@@ -17,8 +17,11 @@ resource "aws_customer_gateway" "aws-vpn-cgw" {
 resource "aws_vpn_connection" "aws-vpn-conn" {
   vpn_gateway_id      = aws_vpn_gateway.aws-vpn-gw.id
   customer_gateway_id = aws_customer_gateway.aws-vpn-cgw.id
-  type                = var.vpn_type
+  type                = "ipsec.1"
   static_routes_only  = true
+  tags        = {
+    Name = "vpn-s2s-${var.org_name}"
+  }
 }
 
 resource "aws_vpn_connection_route" "aws-vpn-connection" {
