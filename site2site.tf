@@ -8,7 +8,7 @@ resource "aws_vpn_gateway" "aws-vpn-gw" {
 resource "aws_customer_gateway" "aws-vpn-cgw" {
   bgp_asn     = 65000
   ip_address  = var.external_ip
-  type        = var.vpn_type
+  type        = "ipsec.1"
   tags        = {
     Name = "vpn-cgw-${var.org_name}"
   }
