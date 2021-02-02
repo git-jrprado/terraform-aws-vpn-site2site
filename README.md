@@ -5,10 +5,10 @@ This terraform module provide resources to establish VPN site-to-site AWS VPN wi
 
 
 
-         .-~~~-.                                                  --------------------------    
-  .- ~ ~-(       )_ _                                             |                        |
- /                     ~ -.                ipsec tunnel           |                        |
-|          AWS VPC          \ ----------------------------------> |   On-premise Customer  |
- \                         .'                                     |         Network        |
-   ~- . _____________ . -~                                        |                        |
-                                                                  --------------------------
+         .-~~~-.                                -----------------------    
+  .- ~ ~-(       )_ _                           |                     |
+ /                     ~ -.     ipsec tunnel    |                     |
+|          AWS VPC          \ ----------------> | On-premise Customer |
+ \                         .'                   |       Network       |
+   ~- . _____________ . -~                      |                     |
+                                                -----------------------
