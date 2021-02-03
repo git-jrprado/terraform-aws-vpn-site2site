@@ -18,8 +18,8 @@ variable "rtable_id" {
     description = "ID of router table propagation"
 }
 
-variable "rtable_nacl" {
-    description = "Transit' NACL"
+variable "nacl_table" {
+    description = "NACL's table to creating rules for subnet"
 }
 
 variable "serial" {
