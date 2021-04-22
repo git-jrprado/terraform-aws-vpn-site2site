@@ -30,7 +30,7 @@ resource "aws_vpn_connection_route" "aws-vpn-connection" {
 }
 
 resource "aws_vpn_gateway_route_propagation" "aws-vpn-route" {
-  route_table_id            = var.rtable_id
-  vpn_gateway_id            = aws_vpn_gateway.aws-vpn-gw.id
+  count           = length(var.route_table_ids)
+  route_table_id  = element(tolist(var.route_table_ids), count.index) 
+  vpn_gateway_id  = aws_vpn_gateway.aws-vpn-gw.id
 }
-
