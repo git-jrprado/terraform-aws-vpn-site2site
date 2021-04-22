@@ -14,8 +14,8 @@ variable "onpremise_cidr" {
     description = "CIDR of internal client network"
 }
 
-variable "rtable_id" {
-    description = "ID of router table propagation"
+variable "route_table_ids" {
+    description = "IDs of router table propagation"
 }
 
 variable "nacl_table" {
